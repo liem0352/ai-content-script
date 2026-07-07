@@ -1,0 +1,155 @@
+{
+  "manifest_version": 3,
+  "name": "MultiAI Answer",
+  "description": "基于多模型 AI 投票的智能答题助手，让答题更轻松、更准确。支持多个主流 AI 模型，智能分析题目，自动生成答案。",
+  "version": "1.0.3",
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  },
+  "author": "Trashwbin",
+  "permissions": [
+    "tabs",
+    "clipboardRead",
+    "clipboardWrite",
+    "storage",
+    "system.display"
+  ],
+  "host_permissions": [
+    "https://*.chaoxing.com/*",
+    "https://chat.deepseek.com/*",
+    "https://www.kimi.com/*",
+    "https://tongyi.com/*",
+    "https://chatglm.cn/*",
+    "https://doubao.com/*",
+    "https://www.doubao.com/*",
+    "https://yiyan.baidu.com/*",
+    "https://xinghuo.xfyun.cn/*",
+    "https://chatgpt.com/*",
+    "https://gemini.google.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.chaoxing.com/*/work*",
+        "https://*.chaoxing.com/*/mooc2/work*",
+        "https://*.chaoxing.com/*/exam*",
+        "https://*.chaoxing.com/*/mooc2/exam*",
+        "https://*.chaoxing.com/*/test*",
+        "https://*.chaoxing.com/*/mooc2/test*",
+        "https://*.chaoxing.com/mycourse/studentstudy*"
+      ],
+      "js": [
+        "lib/html2canvas.min.js",
+        "src/config/config.js",
+        "src/content/question/questionExtractor.js",
+        "src/content/question/handlers/questionHandlers.js",
+        "src/content/question/handlers/autoFill.js",
+        "src/content/question/handlers/answerFormatter.js",
+        "src/content/question/handlers/questionToImage.js",
+        "src/content/ai/aiConfigModal.js",
+        "src/content/question/previewModal.js",
+        "src/content/question/handlers/answerHandler.js",
+        "src/content/main.js",
+        "src/content/utils/notification.js"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://www.kimi.com/*"
+      ],
+      "js": [
+        "src/content/ai/debugPanel.js",
+        "src/content/ai/kimi-content.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://chat.deepseek.com/*"
+      ],
+      "js": [
+        "src/content/ai/debugPanel.js",
+        "src/content/ai/deepseek-content.js",
+        "src/content/ai/test-script.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://tongyi.com/*"
+      ],
+      "js": [
+        "src/content/ai/debugPanel.js",
+        "src/content/ai/tongyi-content.js",
+        "src/content/ai/test-script.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://chatglm.cn/*"
+      ],
+      "js": [
+        "src/content/ai/debugPanel.js",
+        "src/content/ai/chatglm-content.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://doubao.com/*",
+        "https://www.doubao.com/*"
+      ],
+      "js": [
+        "src/content/ai/debugPanel.js",
+        "src/content/ai/doubao-content.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://yiyan.baidu.com/*"
+      ],
+      "js": [
+        "src/content/ai/debugPanel.js",
+        "src/content/ai/yiyan-content.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://xinghuo.xfyun.cn/desk"
+      ],
+      "js": [
+        "src/content/ai/debugPanel.js",
+        "src/content/ai/xinghuo-content.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://chatgpt.com/*"
+      ],
+      "js": [
+        "src/content/ai/debugPanel.js",
+        "src/content/ai/chatgpt-content.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://gemini.google.com/*"
+      ],
+      "js": [
+        "src/content/ai/debugPanel.js",
+        "src/content/ai/gemini-content.js"
+      ]
+    }
+  ]
+}
