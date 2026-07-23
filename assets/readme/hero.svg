@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">MultiAI Answer — 多模型 AI 投票答题助手</title>
+  <desc id="heroDesc">Chrome 浏览器扩展,整合 ChatGPT、Gemini、Kimi、通义千问多个 AI 模型,通过权重投票生成答题结果并自动填写。作者 liem,版本 v1.0.4。</desc>
+
+  <defs>
+    <style>
+      .ff-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .ff-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <!-- 投票控制台背景:近黑紫底,圆角 26 -->
+  <rect x="0" y="0" width="1200" height="360" rx="26" ry="26" fill="#0F0E17"/>
+
+  <!-- 左侧:标题块 -->
+  <g transform="translate(56 40)">
+    <text x="0" y="20" class="ff-mono" font-size="14" fill="#7C5CFF" letter-spacing="2">BROWSER EXTENSION · MULTI-AI</text>
+    <text x="0" y="84" class="ff-sans" font-size="44" font-weight="700" fill="#E8E4D9">MultiAI Answer</text>
+    <text x="0" y="120" class="ff-sans" font-size="18" fill="#6B6B7E">多模型 AI 投票答题助手 · Chrome 扩展</text>
+    <text x="0" y="164" class="ff-mono" font-size="14" fill="#6B6B7E">ChatGPT · Gemini · Kimi · 通义 · v1.0.4</text>
+    <line x1="0" y1="196" x2="48" y2="196" stroke="#E8B547" stroke-width="2"/>
+  </g>
+
+  <!-- 右侧:多模型投票面板示意 -->
+  <g transform="translate(720 40)">
+    <!-- 面板外框(极弱描边,定义控制台区域) -->
+    <rect x="0" y="0" width="424" height="280" rx="8" ry="8" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+
+    <!-- AI 模型卡 1: ChatGPT → A -->
+    <g transform="translate(16 16)">
+      <rect x="0" y="0" width="120" height="60" rx="8" ry="8" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+      <text x="12" y="26" class="ff-mono" font-size="12" fill="#E8E4D9">ChatGPT</text>
+      <text x="12" y="48" class="ff-mono" font-size="14" font-weight="600" fill="#7C5CFF">→ A</text>
+    </g>
+
+    <!-- AI 模型卡 2: Kimi → A -->
+    <g transform="translate(16 88)">
+      <rect x="0" y="0" width="120" height="60" rx="8" ry="8" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+      <text x="12" y="26" class="ff-mono" font-size="12" fill="#E8E4D9">Kimi</text>
+      <text x="12" y="48" class="ff-mono" font-size="14" font-weight="600" fill="#7C5CFF">→ A</text>
+    </g>
+
+    <!-- AI 模型卡 3: 通义 → B -->
+    <g transform="translate(16 160)">
+      <rect x="0" y="0" width="120" height="60" rx="8" ry="8" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+      <text x="12" y="26" class="ff-mono" font-size="12" fill="#E8E4D9">通义</text>
+      <text x="12" y="48" class="ff-mono" font-size="14" font-weight="600" fill="#7C5CFF">→ B</text>
+    </g>
+
+    <!-- 汇聚箭头:三模型答案汇聚到投票结果框 -->
+    <g stroke="#6B6B7E" stroke-width="1" fill="none">
+      <path d="M 136 46 L 220 130"/>
+      <path d="M 136 118 L 220 140"/>
+      <path d="M 136 190 L 220 150"/>
+    </g>
+    <g fill="#6B6B7E">
+      <polygon points="228,130 220,126 220,134"/>
+      <polygon points="228,140 220,136 220,144"/>
+      <polygon points="228,150 220,146 220,154"/>
+    </g>
+
+    <!-- 投票结果汇总框:琥珀描边 -->
+    <g transform="translate(228 80)">
+      <rect x="0" y="0" width="180" height="120" rx="8" ry="8" fill="#1A1825" stroke="#E8B547" stroke-width="1"/>
+      <text x="14" y="24" class="ff-mono" font-size="12" fill="#E8B547" letter-spacing="1">投票结果</text>
+      <text x="14" y="72" class="ff-mono" font-size="28" font-weight="700" fill="#E8E4D9">A · 67%</text>
+      <text x="14" y="100" class="ff-mono" font-size="10" fill="#6B6B7E">权重: 2:1:1</text>
+    </g>
+  </g>
+
+  <!-- 底部元信息 -->
+  <text x="56" y="342" class="ff-mono" font-size="12" fill="#6B6B7E">Chrome 扩展 · 本地运行 · MIT · 作者 liem</text>
+</svg>
