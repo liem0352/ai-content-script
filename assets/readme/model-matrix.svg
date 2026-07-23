@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" role="img" aria-labelledby="mmTitle mmDesc">
+  <title id="mmTitle">支持的 AI 模型矩阵</title>
+  <desc id="mmDesc">五个 AI 模型卡片墙:ChatGPT、Gemini、Kimi、通义千问、DeepSeek,各自权重与擅长方向。</desc>
+
+  <defs>
+    <style>
+      .ff-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .ff-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="320" rx="14" ry="14" fill="#0F0E17"/>
+
+  <!-- ChatGPT (w2 · 默认权重最高 · 琥珀强调) -->
+  <g transform="translate(36 30)">
+    <rect x="0" y="0" width="200" height="260" rx="10" ry="10" fill="#13111C" stroke="#E8B547" stroke-width="1"/>
+    <rect x="0" y="0" width="200" height="4" rx="2" ry="2" fill="#E8B547"/>
+    <text x="16" y="32" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.8">OPENAI</text>
+    <text x="16" y="62" class="ff-sans" font-size="20" font-weight="700" fill="#E8E4D9">ChatGPT</text>
+
+    <g transform="translate(16 80)">
+      <rect x="0" y="0" width="48" height="22" rx="4" ry="4" fill="#1A1825" stroke="#E8B547" stroke-width="1"/>
+      <text x="24" y="15" class="ff-mono" font-size="11" font-weight="700" fill="#E8B547" text-anchor="middle">w2</text>
+      <text x="56" y="15" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.2">WEIGHT</text>
+    </g>
+
+    <line x1="16" y1="120" x2="184" y2="120" stroke="#1F1D2E"/>
+
+    <text x="16" y="142" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.5">SPECIALTY</text>
+    <text x="16" y="166" class="ff-sans" font-size="14" fill="#E8E4D9">通用问答</text>
+    <text x="16" y="188" class="ff-sans" font-size="14" fill="#E8E4D9">长文本理解</text>
+
+    <!-- 底部 tally:2 票(项目原生 motif) -->
+    <g transform="translate(16 222)" stroke-linecap="round">
+      <line x1="0" y1="0" x2="0" y2="22" stroke="#E8B547" stroke-width="2.5"/>
+      <line x1="10" y1="0" x2="10" y2="22" stroke="#E8B547" stroke-width="2.5"/>
+      <text x="26" y="16" class="ff-mono" font-size="10" fill="#6B6B7E">2 votes</text>
+    </g>
+  </g>
+
+  <!-- Gemini (w1) -->
+  <g transform="translate(268 30)">
+    <rect x="0" y="0" width="200" height="260" rx="10" ry="10" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+    <rect x="0" y="0" width="200" height="4" rx="2" ry="2" fill="#7C5CFF"/>
+    <text x="16" y="32" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.8">GOOGLE</text>
+    <text x="16" y="62" class="ff-sans" font-size="20" font-weight="700" fill="#E8E4D9">Gemini</text>
+
+    <g transform="translate(16 80)">
+      <rect x="0" y="0" width="48" height="22" rx="4" ry="4" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+      <text x="24" y="15" class="ff-mono" font-size="11" font-weight="700" fill="#7C5CFF" text-anchor="middle">w1</text>
+      <text x="56" y="15" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.2">WEIGHT</text>
+    </g>
+
+    <line x1="16" y1="120" x2="184" y2="120" stroke="#1F1D2E"/>
+
+    <text x="16" y="142" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.5">SPECIALTY</text>
+    <text x="16" y="166" class="ff-sans" font-size="14" fill="#E8E4D9">多模态</text>
+    <text x="16" y="188" class="ff-sans" font-size="14" fill="#E8E4D9">事实核查</text>
+
+    <g transform="translate(16 222)" stroke-linecap="round">
+      <line x1="0" y1="0" x2="0" y2="22" stroke="#7C5CFF" stroke-width="2.5"/>
+      <text x="16" y="16" class="ff-mono" font-size="10" fill="#6B6B7E">1 vote</text>
+    </g>
+  </g>
+
+  <!-- Kimi (w1) -->
+  <g transform="translate(500 30)">
+    <rect x="0" y="0" width="200" height="260" rx="10" ry="10" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+    <rect x="0" y="0" width="200" height="4" rx="2" ry="2" fill="#7C5CFF"/>
+    <text x="16" y="32" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.8">MOONSHOT</text>
+    <text x="16" y="62" class="ff-sans" font-size="20" font-weight="700" fill="#E8E4D9">Kimi</text>
+
+    <g transform="translate(16 80)">
+      <rect x="0" y="0" width="48" height="22" rx="4" ry="4" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+      <text x="24" y="15" class="ff-mono" font-size="11" font-weight="700" fill="#7C5CFF" text-anchor="middle">w1</text>
+      <text x="56" y="15" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.2">WEIGHT</text>
+    </g>
+
+    <line x1="16" y1="120" x2="184" y2="120" stroke="#1F1D2E"/>
+
+    <text x="16" y="142" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.5">SPECIALTY</text>
+    <text x="16" y="166" class="ff-sans" font-size="14" fill="#E8E4D9">长上下文</text>
+    <text x="16" y="188" class="ff-sans" font-size="14" fill="#E8E4D9">中文阅读</text>
+
+    <g transform="translate(16 222)" stroke-linecap="round">
+      <line x1="0" y1="0" x2="0" y2="22" stroke="#7C5CFF" stroke-width="2.5"/>
+      <text x="16" y="16" class="ff-mono" font-size="10" fill="#6B6B7E">1 vote</text>
+    </g>
+  </g>
+
+  <!-- 通义千问 (w1) -->
+  <g transform="translate(732 30)">
+    <rect x="0" y="0" width="200" height="260" rx="10" ry="10" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+    <rect x="0" y="0" width="200" height="4" rx="2" ry="2" fill="#7C5CFF"/>
+    <text x="16" y="32" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.8">ALIBABA</text>
+    <text x="16" y="62" class="ff-sans" font-size="18" font-weight="700" fill="#E8E4D9">通义千问</text>
+
+    <g transform="translate(16 80)">
+      <rect x="0" y="0" width="48" height="22" rx="4" ry="4" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+      <text x="24" y="15" class="ff-mono" font-size="11" font-weight="700" fill="#7C5CFF" text-anchor="middle">w1</text>
+      <text x="56" y="15" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.2">WEIGHT</text>
+    </g>
+
+    <line x1="16" y1="120" x2="184" y2="120" stroke="#1F1D2E"/>
+
+    <text x="16" y="142" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.5">SPECIALTY</text>
+    <text x="16" y="166" class="ff-sans" font-size="14" fill="#E8E4D9">中文试题</text>
+    <text x="16" y="188" class="ff-sans" font-size="14" fill="#E8E4D9">学科知识</text>
+
+    <g transform="translate(16 222)" stroke-linecap="round">
+      <line x1="0" y1="0" x2="0" y2="22" stroke="#7C5CFF" stroke-width="2.5"/>
+      <text x="16" y="16" class="ff-mono" font-size="10" fill="#6B6B7E">1 vote</text>
+    </g>
+  </g>
+
+  <!-- DeepSeek (w1) -->
+  <g transform="translate(964 30)">
+    <rect x="0" y="0" width="200" height="260" rx="10" ry="10" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+    <rect x="0" y="0" width="200" height="4" rx="2" ry="2" fill="#7C5CFF"/>
+    <text x="16" y="32" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.8">DEEPSEEK</text>
+    <text x="16" y="62" class="ff-sans" font-size="20" font-weight="700" fill="#E8E4D9">DeepSeek</text>
+
+    <g transform="translate(16 80)">
+      <rect x="0" y="0" width="48" height="22" rx="4" ry="4" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+      <text x="24" y="15" class="ff-mono" font-size="11" font-weight="700" fill="#7C5CFF" text-anchor="middle">w1</text>
+      <text x="56" y="15" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.2">WEIGHT</text>
+    </g>
+
+    <line x1="16" y1="120" x2="184" y2="120" stroke="#1F1D2E"/>
+
+    <text x="16" y="142" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.5">SPECIALTY</text>
+    <text x="16" y="166" class="ff-sans" font-size="14" fill="#E8E4D9">推理</text>
+    <text x="16" y="188" class="ff-sans" font-size="14" fill="#E8E4D9">数学计算</text>
+
+    <g transform="translate(16 222)" stroke-linecap="round">
+      <line x1="0" y1="0" x2="0" y2="22" stroke="#7C5CFF" stroke-width="2.5"/>
+      <text x="16" y="16" class="ff-mono" font-size="10" fill="#6B6B7E">1 vote</text>
+    </g>
+  </g>
+</svg>

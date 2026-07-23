@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" role="img" aria-labelledby="heroTitle heroDesc">
-  <title id="heroTitle">MultiAI Answer — 多模型 AI 投票答题助手</title>
-  <desc id="heroDesc">Chrome 浏览器扩展,整合 ChatGPT、Gemini、Kimi、通义千问多个 AI 模型,通过权重投票生成答题结果并自动填写。作者 liem,版本 v1.0.4。</desc>
+  <title id="heroTitle">MultiAI Answer - 多模型 AI 投票答题助手</title>
+  <desc id="heroDesc">Chrome 浏览器扩展,整合 ChatGPT、Gemini、Kimi、通义千问、DeepSeek 五个 AI 模型,通过权重投票生成答题结果并自动填写。作者 liem,版本 v1.0.4。</desc>
 
   <defs>
     <style>
@@ -12,62 +12,103 @@
   <!-- 投票控制台背景:近黑紫底,圆角 26 -->
   <rect x="0" y="0" width="1200" height="360" rx="26" ry="26" fill="#0F0E17"/>
 
+  <!-- 极弱 tally 背景 motif:左下角投票计数痕迹(项目原生 motif) -->
+  <g transform="translate(60 300)" stroke-linecap="round" opacity="0.55">
+    <line x1="0" y1="0" x2="0" y2="32" stroke="#1F1D2E" stroke-width="2"/>
+    <line x1="9" y1="0" x2="9" y2="32" stroke="#1F1D2E" stroke-width="2"/>
+    <line x1="18" y1="0" x2="18" y2="32" stroke="#1F1D2E" stroke-width="2"/>
+    <line x1="27" y1="0" x2="27" y2="32" stroke="#1F1D2E" stroke-width="2"/>
+    <line x1="36" y1="0" x2="36" y2="32" stroke="#2A2640" stroke-width="2"/>
+    <line x1="-4" y1="36" x2="40" y2="-4" stroke="#2A2640" stroke-width="1.5"/>
+  </g>
+
   <!-- 左侧:标题块 -->
-  <g transform="translate(56 40)">
-    <text x="0" y="20" class="ff-mono" font-size="14" fill="#7C5CFF" letter-spacing="2">BROWSER EXTENSION · MULTI-AI</text>
-    <text x="0" y="84" class="ff-sans" font-size="44" font-weight="700" fill="#E8E4D9">MultiAI Answer</text>
-    <text x="0" y="120" class="ff-sans" font-size="18" fill="#6B6B7E">多模型 AI 投票答题助手 · Chrome 扩展</text>
-    <text x="0" y="164" class="ff-mono" font-size="14" fill="#6B6B7E">ChatGPT · Gemini · Kimi · 通义 · v1.0.4</text>
-    <line x1="0" y1="196" x2="48" y2="196" stroke="#E8B547" stroke-width="2"/>
+  <g transform="translate(56 64)">
+    <text x="0" y="0" class="ff-mono" font-size="13" fill="#7C5CFF" letter-spacing="2.4">BROWSER EXTENSION · MULTI-MODEL VOTING</text>
+    <text x="0" y="62" class="ff-sans" font-size="44" font-weight="700" fill="#E8E4D9">MultiAI Answer</text>
+    <text x="0" y="96" class="ff-sans" font-size="18" fill="#A7A4B8">多模型 AI 投票答题助手 · Chrome 扩展</text>
+    <line x1="0" y1="118" x2="56" y2="118" stroke="#E8B547" stroke-width="2"/>
+    <text x="0" y="150" class="ff-mono" font-size="13" fill="#6B6B7E">ChatGPT · Gemini · Kimi · 通义 · DeepSeek · v1.0.4</text>
+    <text x="0" y="176" class="ff-mono" font-size="13" fill="#6B6B7E">本地运行 · MIT License · 作者 liem</text>
   </g>
 
-  <!-- 右侧:多模型投票面板示意 -->
-  <g transform="translate(720 40)">
-    <!-- 面板外框(极弱描边,定义控制台区域) -->
-    <rect x="0" y="0" width="424" height="280" rx="8" ry="8" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+  <!-- 右侧:投票面板示意(5 模型并行 → 权重投票 → 输出) -->
+  <g transform="translate(700 40)">
+    <rect x="0" y="0" width="460" height="280" rx="10" ry="10" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+    <text x="16" y="24" class="ff-mono" font-size="11" fill="#6B6B7E" letter-spacing="1.5">VOTE CONSOLE · 5 MODELS</text>
 
-    <!-- AI 模型卡 1: ChatGPT → A -->
-    <g transform="translate(16 16)">
-      <rect x="0" y="0" width="120" height="60" rx="8" ry="8" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
-      <text x="12" y="26" class="ff-mono" font-size="12" fill="#E8E4D9">ChatGPT</text>
-      <text x="12" y="48" class="ff-mono" font-size="14" font-weight="600" fill="#7C5CFF">→ A</text>
+    <!-- 5 模型卡(左侧列,每卡 140 x 40,行距 48) -->
+    <g transform="translate(16 40)">
+      <!-- ChatGPT w2 → A -->
+      <g transform="translate(0 0)">
+        <rect x="0" y="0" width="140" height="40" rx="6" ry="6" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+        <text x="10" y="16" class="ff-mono" font-size="11" fill="#E8E4D9">ChatGPT</text>
+        <text x="130" y="16" class="ff-mono" font-size="9" fill="#E8B547" text-anchor="end">w2</text>
+        <text x="10" y="32" class="ff-mono" font-size="12" font-weight="600" fill="#7C5CFF">→ A</text>
+      </g>
+      <!-- Gemini w1 → A -->
+      <g transform="translate(0 48)">
+        <rect x="0" y="0" width="140" height="40" rx="6" ry="6" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+        <text x="10" y="16" class="ff-mono" font-size="11" fill="#E8E4D9">Gemini</text>
+        <text x="130" y="16" class="ff-mono" font-size="9" fill="#6B6B7E" text-anchor="end">w1</text>
+        <text x="10" y="32" class="ff-mono" font-size="12" font-weight="600" fill="#7C5CFF">→ A</text>
+      </g>
+      <!-- Kimi w1 → A -->
+      <g transform="translate(0 96)">
+        <rect x="0" y="0" width="140" height="40" rx="6" ry="6" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+        <text x="10" y="16" class="ff-mono" font-size="11" fill="#E8E4D9">Kimi</text>
+        <text x="130" y="16" class="ff-mono" font-size="9" fill="#6B6B7E" text-anchor="end">w1</text>
+        <text x="10" y="32" class="ff-mono" font-size="12" font-weight="600" fill="#7C5CFF">→ A</text>
+      </g>
+      <!-- 通义 w1 → B -->
+      <g transform="translate(0 144)">
+        <rect x="0" y="0" width="140" height="40" rx="6" ry="6" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+        <text x="10" y="16" class="ff-mono" font-size="11" fill="#E8E4D9">通义</text>
+        <text x="130" y="16" class="ff-mono" font-size="9" fill="#6B6B7E" text-anchor="end">w1</text>
+        <text x="10" y="32" class="ff-mono" font-size="12" font-weight="600" fill="#E8E4D9">→ B</text>
+      </g>
+      <!-- DeepSeek w1 → A -->
+      <g transform="translate(0 192)">
+        <rect x="0" y="0" width="140" height="40" rx="6" ry="6" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+        <text x="10" y="16" class="ff-mono" font-size="11" fill="#E8E4D9">DeepSeek</text>
+        <text x="130" y="16" class="ff-mono" font-size="9" fill="#6B6B7E" text-anchor="end">w1</text>
+        <text x="10" y="32" class="ff-mono" font-size="12" font-weight="600" fill="#7C5CFF">→ A</text>
+      </g>
     </g>
 
-    <!-- AI 模型卡 2: Kimi → A -->
-    <g transform="translate(16 88)">
-      <rect x="0" y="0" width="120" height="60" rx="8" ry="8" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
-      <text x="12" y="26" class="ff-mono" font-size="12" fill="#E8E4D9">Kimi</text>
-      <text x="12" y="48" class="ff-mono" font-size="14" font-weight="600" fill="#7C5CFF">→ A</text>
+    <!-- 汇聚箭头:5 模型 → 投票结果(项目原生 motif:fan-in) -->
+    <g stroke="#3A3850" stroke-width="1" fill="none">
+      <path d="M 156 60 C 200 60, 220 140, 240 140"/>
+      <path d="M 156 108 C 200 108, 220 140, 240 140"/>
+      <path d="M 156 156 L 240 140"/>
+      <path d="M 156 204 C 200 204, 220 140, 240 140"/>
+      <path d="M 156 252 C 200 252, 220 140, 240 140"/>
     </g>
+    <polygon points="248,140 238,134 238,146" fill="#E8B547"/>
 
-    <!-- AI 模型卡 3: 通义 → B -->
-    <g transform="translate(16 160)">
-      <rect x="0" y="0" width="120" height="60" rx="8" ry="8" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
-      <text x="12" y="26" class="ff-mono" font-size="12" fill="#E8E4D9">通义</text>
-      <text x="12" y="48" class="ff-mono" font-size="14" font-weight="600" fill="#7C5CFF">→ B</text>
-    </g>
+    <!-- 投票结果框(琥珀描边表示结果落地) -->
+    <g transform="translate(256 60)">
+      <rect x="0" y="0" width="188" height="160" rx="8" ry="8" fill="#1A1825" stroke="#E8B547" stroke-width="1.5"/>
+      <text x="14" y="22" class="ff-mono" font-size="11" fill="#E8B547" letter-spacing="1.2">投票结果 · VOTE</text>
 
-    <!-- 汇聚箭头:三模型答案汇聚到投票结果框 -->
-    <g stroke="#6B6B7E" stroke-width="1" fill="none">
-      <path d="M 136 46 L 220 130"/>
-      <path d="M 136 118 L 220 140"/>
-      <path d="M 136 190 L 220 150"/>
-    </g>
-    <g fill="#6B6B7E">
-      <polygon points="228,130 220,126 220,134"/>
-      <polygon points="228,140 220,136 220,144"/>
-      <polygon points="228,150 220,146 220,154"/>
-    </g>
+      <!-- A · 5w · 83% -->
+      <text x="14" y="50" class="ff-mono" font-size="12" fill="#E8E4D9">A</text>
+      <text x="26" y="50" class="ff-mono" font-size="10" fill="#6B6B7E">5w</text>
+      <rect x="50" y="40" width="100" height="12" rx="2" fill="#1F1D2E"/>
+      <rect x="50" y="40" width="83" height="12" rx="2" fill="#7C5CFF"/>
+      <text x="174" y="50" class="ff-mono" font-size="10" fill="#E8E4D9" text-anchor="end">83%</text>
 
-    <!-- 投票结果汇总框:琥珀描边 -->
-    <g transform="translate(228 80)">
-      <rect x="0" y="0" width="180" height="120" rx="8" ry="8" fill="#1A1825" stroke="#E8B547" stroke-width="1"/>
-      <text x="14" y="24" class="ff-mono" font-size="12" fill="#E8B547" letter-spacing="1">投票结果</text>
-      <text x="14" y="72" class="ff-mono" font-size="28" font-weight="700" fill="#E8E4D9">A · 67%</text>
-      <text x="14" y="100" class="ff-mono" font-size="10" fill="#6B6B7E">权重: 2:1:1</text>
+      <!-- B · 1w · 17% -->
+      <text x="14" y="74" class="ff-mono" font-size="12" fill="#6B6B7E">B</text>
+      <text x="26" y="74" class="ff-mono" font-size="10" fill="#6B6B7E">1w</text>
+      <rect x="50" y="64" width="100" height="12" rx="2" fill="#1F1D2E"/>
+      <rect x="50" y="64" width="17" height="12" rx="2" fill="#3A3850"/>
+      <text x="174" y="74" class="ff-mono" font-size="10" fill="#6B6B7E" text-anchor="end">17%</text>
+
+      <line x1="14" y1="98" x2="174" y2="98" stroke="#1F1D2E"/>
+
+      <text x="14" y="124" class="ff-mono" font-size="11" fill="#6B6B7E" letter-spacing="1.2">OUTPUT</text>
+      <text x="14" y="148" class="ff-mono" font-size="16" font-weight="700" fill="#E8B547">→ 填写 A</text>
     </g>
   </g>
-
-  <!-- 底部元信息 -->
-  <text x="56" y="342" class="ff-mono" font-size="12" fill="#6B6B7E">Chrome 扩展 · 本地运行 · MIT · 作者 liem</text>
 </svg>

@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" role="img" aria-labelledby="vpTitle vpDesc">
+  <title id="vpTitle">MultiAI Answer 投票流水线</title>
+  <desc id="vpDesc">完整流水线:输入题目 prompt → 5 个 AI 模型并行作答 → 权重投票融合 → 自动填写输出。</desc>
+
+  <defs>
+    <style>
+      .ff-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .ff-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="360" rx="14" ry="14" fill="#0F0E17"/>
+
+  <!-- 顶部标题 -->
+  <g transform="translate(48 32)">
+    <text x="0" y="0" class="ff-mono" font-size="12" fill="#7C5CFF" letter-spacing="2.4">VOTING PIPELINE</text>
+    <text x="0" y="28" class="ff-sans" font-size="20" font-weight="600" fill="#E8E4D9">从一道题到投票落地的完整路径</text>
+  </g>
+
+  <!-- INPUT 阶段 -->
+  <g transform="translate(48 130)">
+    <rect x="0" y="0" width="200" height="140" rx="8" ry="8" fill="#1A1825" stroke="#6B6B7E" stroke-width="1"/>
+    <text x="14" y="24" class="ff-mono" font-size="11" fill="#6B6B7E" letter-spacing="1.5">INPUT</text>
+    <text x="14" y="52" class="ff-sans" font-size="14" font-weight="600" fill="#E8E4D9">题目 prompt</text>
+    <text x="14" y="76" class="ff-mono" font-size="11" fill="#A7A4B8">"下列哪一项..."</text>
+    <line x1="14" y1="90" x2="186" y2="90" stroke="#1F1D2E"/>
+    <text x="14" y="108" class="ff-mono" font-size="11" fill="#6B6B7E">题型: 单选</text>
+    <text x="14" y="126" class="ff-mono" font-size="11" fill="#6B6B7E">选项: A / B / C / D</text>
+  </g>
+
+  <!-- Fan-out 箭头: INPUT → 5 MODELS -->
+  <g stroke="#3A3850" stroke-width="1" fill="none">
+    <path d="M 248 160 C 285 160, 300 86, 320 86"/>
+    <path d="M 248 180 C 285 180, 300 138, 320 138"/>
+    <path d="M 248 200 L 320 190"/>
+    <path d="M 248 220 C 285 220, 300 242, 320 242"/>
+    <path d="M 248 240 C 285 240, 300 294, 320 294"/>
+  </g>
+
+  <!-- 5 MODELS 阶段(并行) -->
+  <g transform="translate(320 64)">
+    <!-- ChatGPT w2 → A -->
+    <g transform="translate(0 0)">
+      <rect x="0" y="0" width="160" height="44" rx="6" ry="6" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+      <text x="12" y="18" class="ff-mono" font-size="12" fill="#E8E4D9">ChatGPT</text>
+      <text x="148" y="18" class="ff-mono" font-size="10" fill="#E8B547" text-anchor="end">w2</text>
+      <text x="12" y="34" class="ff-mono" font-size="12" font-weight="600" fill="#7C5CFF">→ A</text>
+    </g>
+    <!-- Gemini w1 → A -->
+    <g transform="translate(0 52)">
+      <rect x="0" y="0" width="160" height="44" rx="6" ry="6" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+      <text x="12" y="18" class="ff-mono" font-size="12" fill="#E8E4D9">Gemini</text>
+      <text x="148" y="18" class="ff-mono" font-size="10" fill="#6B6B7E" text-anchor="end">w1</text>
+      <text x="12" y="34" class="ff-mono" font-size="12" font-weight="600" fill="#7C5CFF">→ A</text>
+    </g>
+    <!-- Kimi w1 → A -->
+    <g transform="translate(0 104)">
+      <rect x="0" y="0" width="160" height="44" rx="6" ry="6" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+      <text x="12" y="18" class="ff-mono" font-size="12" fill="#E8E4D9">Kimi</text>
+      <text x="148" y="18" class="ff-mono" font-size="10" fill="#6B6B7E" text-anchor="end">w1</text>
+      <text x="12" y="34" class="ff-mono" font-size="12" font-weight="600" fill="#7C5CFF">→ A</text>
+    </g>
+    <!-- 通义 w1 → B -->
+    <g transform="translate(0 156)">
+      <rect x="0" y="0" width="160" height="44" rx="6" ry="6" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+      <text x="12" y="18" class="ff-mono" font-size="12" fill="#E8E4D9">通义</text>
+      <text x="148" y="18" class="ff-mono" font-size="10" fill="#6B6B7E" text-anchor="end">w1</text>
+      <text x="12" y="34" class="ff-mono" font-size="12" font-weight="600" fill="#E8E4D9">→ B</text>
+    </g>
+    <!-- DeepSeek w1 → A -->
+    <g transform="translate(0 208)">
+      <rect x="0" y="0" width="160" height="44" rx="6" ry="6" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+      <text x="12" y="18" class="ff-mono" font-size="12" fill="#E8E4D9">DeepSeek</text>
+      <text x="148" y="18" class="ff-mono" font-size="10" fill="#6B6B7E" text-anchor="end">w1</text>
+      <text x="12" y="34" class="ff-mono" font-size="12" font-weight="600" fill="#7C5CFF">→ A</text>
+    </g>
+  </g>
+
+  <!-- Fan-in 箭头: 5 MODELS → VOTE -->
+  <g stroke="#3A3850" stroke-width="1" fill="none">
+    <path d="M 480 86 C 520 86, 540 160, 560 160"/>
+    <path d="M 480 138 C 520 138, 540 170, 560 170"/>
+    <path d="M 480 190 L 560 180"/>
+    <path d="M 480 242 C 520 242, 540 190, 560 190"/>
+    <path d="M 480 294 C 520 294, 540 200, 560 200"/>
+  </g>
+
+  <!-- VOTE 阶段 -->
+  <g transform="translate(560 90)">
+    <rect x="0" y="0" width="220" height="180" rx="8" ry="8" fill="#1A1825" stroke="#7C5CFF" stroke-width="1.5"/>
+    <text x="14" y="24" class="ff-mono" font-size="11" fill="#7C5CFF" letter-spacing="1.5">VOTE · 权重投票</text>
+
+    <!-- A · 5w · 83% -->
+    <text x="14" y="52" class="ff-mono" font-size="11" fill="#E8E4D9">A · 5w</text>
+    <rect x="62" y="42" width="120" height="12" rx="2" fill="#1F1D2E"/>
+    <rect x="62" y="42" width="100" height="12" rx="2" fill="#7C5CFF"/>
+    <text x="206" y="52" class="ff-mono" font-size="10" fill="#E8E4D9" text-anchor="end">83%</text>
+
+    <!-- B · 1w · 17% -->
+    <text x="14" y="76" class="ff-mono" font-size="11" fill="#6B6B7E">B · 1w</text>
+    <rect x="62" y="66" width="120" height="12" rx="2" fill="#1F1D2E"/>
+    <rect x="62" y="66" width="20" height="12" rx="2" fill="#3A3850"/>
+    <text x="206" y="76" class="ff-mono" font-size="10" fill="#6B6B7E" text-anchor="end">17%</text>
+
+    <line x1="14" y1="98" x2="206" y2="98" stroke="#1F1D2E"/>
+
+    <!-- Tally motif:5 票计数(项目原生 motif) -->
+    <g transform="translate(14 116)" stroke-linecap="round">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#7C5CFF" stroke-width="2"/>
+      <line x1="6" y1="0" x2="6" y2="20" stroke="#7C5CFF" stroke-width="2"/>
+      <line x1="12" y1="0" x2="12" y2="20" stroke="#7C5CFF" stroke-width="2"/>
+      <line x1="18" y1="0" x2="18" y2="20" stroke="#7C5CFF" stroke-width="2"/>
+      <line x1="24" y1="0" x2="24" y2="20" stroke="#E8B547" stroke-width="2"/>
+      <line x1="-2" y1="22" x2="26" y2="-2" stroke="#E8B547" stroke-width="1.5"/>
+      <text x="40" y="14" class="ff-mono" font-size="10" fill="#6B6B7E">tally · 5 votes</text>
+    </g>
+
+    <text x="14" y="156" class="ff-mono" font-size="11" fill="#6B6B7E" letter-spacing="1.2">FINAL</text>
+  </g>
+
+  <!-- 输出箭头: VOTE → OUTPUT -->
+  <g stroke="#3A3850" stroke-width="1" fill="none">
+    <line x1="780" y1="180" x2="860" y2="180"/>
+  </g>
+  <polygon points="868,180 858,174 858,186" fill="#E8B547"/>
+
+  <!-- OUTPUT 阶段 -->
+  <g transform="translate(860 130)">
+    <rect x="0" y="0" width="292" height="140" rx="8" ry="8" fill="#1A1825" stroke="#E8B547" stroke-width="1.5"/>
+    <text x="14" y="24" class="ff-mono" font-size="11" fill="#E8B547" letter-spacing="1.5">OUTPUT · 自动填写</text>
+    <text x="14" y="54" class="ff-sans" font-size="20" font-weight="700" fill="#E8E4D9">答案: A</text>
+    <line x1="14" y1="72" x2="278" y2="72" stroke="#1F1D2E"/>
+    <text x="14" y="92" class="ff-mono" font-size="11" fill="#A7A4B8">写入: 单选框 / 复选框 / 文本域</text>
+    <text x="14" y="110" class="ff-mono" font-size="11" fill="#6B6B7E">用户可随时覆盖或编辑</text>
+    <text x="14" y="128" class="ff-mono" font-size="11" fill="#6B6B7E">支持解除复制粘贴限制</text>
+  </g>
+</svg>

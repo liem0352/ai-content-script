@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" role="img" aria-labelledby="cfTitle cfDesc">
+  <title id="cfTitle">配置流程</title>
+  <desc id="cfDesc">四步配置:API key 配置、模型选择、参数调优、运行。每步对应不同图标与说明。</desc>
+
+  <defs>
+    <style>
+      .ff-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .ff-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="320" rx="14" ry="14" fill="#0F0E17"/>
+
+  <!-- 顶部标题 -->
+  <g transform="translate(48 32)">
+    <text x="0" y="0" class="ff-mono" font-size="12" fill="#7C5CFF" letter-spacing="2.4">CONFIG FLOW</text>
+    <text x="0" y="28" class="ff-sans" font-size="20" font-weight="600" fill="#E8E4D9">从空白到首次运行的四步</text>
+  </g>
+
+  <!-- 步骤 1: API key 配置 -->
+  <g transform="translate(72 100)">
+    <rect x="0" y="0" width="240" height="180" rx="10" ry="10" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+    <!-- 图标:KEY 字徽 -->
+    <g transform="translate(20 20)">
+      <rect x="0" y="0" width="44" height="24" rx="4" ry="4" fill="#1A1825" stroke="#7C5CFF" stroke-width="1"/>
+      <text x="22" y="16" class="ff-mono" font-size="11" font-weight="700" fill="#7C5CFF" text-anchor="middle">KEY</text>
+    </g>
+    <text x="20" y="78" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.5">STEP</text>
+    <text x="20" y="106" class="ff-sans" font-size="18" font-weight="700" fill="#E8E4D9">API key 配置</text>
+    <line x1="20" y1="124" x2="220" y2="124" stroke="#1F1D2E"/>
+    <text x="20" y="146" class="ff-mono" font-size="11" fill="#A7A4B8">填入各模型 API key</text>
+    <text x="20" y="164" class="ff-mono" font-size="11" fill="#6B6B7E">本地存储 · 不上传</text>
+  </g>
+
+  <!-- 箭头 1 → 2 -->
+  <g stroke="#3A3850" stroke-width="1" fill="none">
+    <line x1="320" y1="190" x2="336" y2="190"/>
+  </g>
+  <polygon points="344,190 336,186 336,194" fill="#6B6B7E"/>
+
+  <!-- 步骤 2: 模型选择 -->
+  <g transform="translate(344 100)">
+    <rect x="0" y="0" width="240" height="180" rx="10" ry="10" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+    <!-- 图标:5 道 tally(项目原生 motif) -->
+    <g transform="translate(20 20)" stroke-linecap="round">
+      <line x1="0" y1="0" x2="0" y2="24" stroke="#7C5CFF" stroke-width="2"/>
+      <line x1="6" y1="0" x2="6" y2="24" stroke="#7C5CFF" stroke-width="2"/>
+      <line x1="12" y1="0" x2="12" y2="24" stroke="#7C5CFF" stroke-width="2"/>
+      <line x1="18" y1="0" x2="18" y2="24" stroke="#7C5CFF" stroke-width="2"/>
+      <line x1="24" y1="0" x2="24" y2="24" stroke="#E8B547" stroke-width="2"/>
+      <line x1="-2" y1="26" x2="26" y2="-2" stroke="#E8B547" stroke-width="1.5"/>
+    </g>
+    <text x="20" y="78" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.5">STEP</text>
+    <text x="20" y="106" class="ff-sans" font-size="18" font-weight="700" fill="#E8E4D9">模型选择</text>
+    <line x1="20" y1="124" x2="220" y2="124" stroke="#1F1D2E"/>
+    <text x="20" y="146" class="ff-mono" font-size="11" fill="#A7A4B8">勾选启用的模型</text>
+    <text x="20" y="164" class="ff-mono" font-size="11" fill="#6B6B7E">可单独关闭某模型</text>
+  </g>
+
+  <!-- 箭头 2 → 3 -->
+  <g stroke="#3A3850" stroke-width="1" fill="none">
+    <line x1="592" y1="190" x2="608" y2="190"/>
+  </g>
+  <polygon points="616,190 608,186 608,194" fill="#6B6B7E"/>
+
+  <!-- 步骤 3: 参数调优 -->
+  <g transform="translate(616 100)">
+    <rect x="0" y="0" width="240" height="180" rx="10" ry="10" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+    <!-- 图标:水平滑块 -->
+    <g transform="translate(20 20)">
+      <line x1="0" y1="12" x2="44" y2="12" stroke="#1F1D2E" stroke-width="2"/>
+      <circle cx="14" cy="12" r="4" fill="#7C5CFF"/>
+      <circle cx="32" cy="12" r="4" fill="#E8B547"/>
+    </g>
+    <text x="20" y="78" class="ff-mono" font-size="10" fill="#6B6B7E" letter-spacing="1.5">STEP</text>
+    <text x="20" y="106" class="ff-sans" font-size="18" font-weight="700" fill="#E8E4D9">参数调优</text>
+    <line x1="20" y1="124" x2="220" y2="124" stroke="#1F1D2E"/>
+    <text x="20" y="146" class="ff-mono" font-size="11" fill="#A7A4B8">设置 0-10 权重</text>
+    <text x="20" y="164" class="ff-mono" font-size="11" fill="#6B6B7E">0 表示仅作参考</text>
+  </g>
+
+  <!-- 箭头 3 → 4 -->
+  <g stroke="#3A3850" stroke-width="1" fill="none">
+    <line x1="864" y1="190" x2="880" y2="190"/>
+  </g>
+  <polygon points="888,190 880,186 880,194" fill="#6B6B7E"/>
+
+  <!-- 步骤 4: 运行(琥珀强调,落地) -->
+  <g transform="translate(888 100)">
+    <rect x="0" y="0" width="240" height="180" rx="10" ry="10" fill="#13111C" stroke="#E8B547" stroke-width="1"/>
+    <!-- 图标:三角形 play -->
+    <g transform="translate(20 20)">
+      <polygon points="0,0 0,24 22,12" fill="none" stroke="#E8B547" stroke-width="2"/>
+    </g>
+    <text x="20" y="78" class="ff-mono" font-size="10" fill="#E8B547" letter-spacing="1.5">RUN</text>
+    <text x="20" y="106" class="ff-sans" font-size="18" font-weight="700" fill="#E8E4D9">运行扩展</text>
+    <line x1="20" y1="124" x2="220" y2="124" stroke="#1F1D2E"/>
+    <text x="20" y="146" class="ff-mono" font-size="11" fill="#A7A4B8">进入题目页面</text>
+    <text x="20" y="164" class="ff-mono" font-size="11" fill="#E8B547">自动填写答案</text>
+  </g>
+</svg>

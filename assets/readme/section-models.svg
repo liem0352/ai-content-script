@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 140" width="100%" role="img" aria-labelledby="mTitle mDesc">
+  <title id="mTitle">支持的 AI 模型</title>
+  <desc id="mDesc">MultiAI Answer 章节头:接入的 AI 模型矩阵,涵盖五个主流大模型平台与权重配置范围。</desc>
+
+  <defs>
+    <style>
+      .ff-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .ff-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="140" rx="12" ry="12" fill="#0F0E17"/>
+
+  <!-- 左侧 tally motif:5 道计数(4 紫 + 1 琥珀,第 5 票斜跨,项目原生投票 motif) -->
+  <g transform="translate(56 48)" stroke-linecap="round">
+    <line x1="0" y1="0" x2="0" y2="44" stroke="#7C5CFF" stroke-width="2.5"/>
+    <line x1="10" y1="0" x2="10" y2="44" stroke="#7C5CFF" stroke-width="2.5"/>
+    <line x1="20" y1="0" x2="20" y2="44" stroke="#7C5CFF" stroke-width="2.5"/>
+    <line x1="30" y1="0" x2="30" y2="44" stroke="#7C5CFF" stroke-width="2.5"/>
+    <line x1="40" y1="0" x2="40" y2="44" stroke="#E8B547" stroke-width="2.5"/>
+    <line x1="-4" y1="48" x2="44" y2="-4" stroke="#E8B547" stroke-width="2"/>
+  </g>
+
+  <!-- 标题块 -->
+  <g transform="translate(132 50)">
+    <text x="0" y="32" class="ff-sans" font-size="34" font-weight="700" fill="#E8E4D9">支持的 AI 模型</text>
+    <text x="0" y="62" class="ff-mono" font-size="13" fill="#6B6B7E">5 PLATFORMS · 0-10 WEIGHT SCALE · 投票即计票</text>
+  </g>
+
+  <!-- 右侧延伸分隔线 -->
+  <line x1="640" y1="82" x2="1144" y2="82" stroke="#1F1D2E" stroke-width="1"/>
+
+  <!-- 右侧元信息:平台计数 -->
+  <g transform="translate(1144 50)">
+    <text x="0" y="32" class="ff-mono" font-size="12" fill="#6B6B7E" letter-spacing="2" text-anchor="end">PLATFORMS</text>
+    <text x="0" y="62" class="ff-sans" font-size="20" font-weight="700" fill="#7C5CFF" text-anchor="end">05</text>
+  </g>
+</svg>

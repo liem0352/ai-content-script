@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%" role="img" aria-labelledby="ofTitle ofDesc">
+  <title id="ofTitle">支持的题型与整合策略</title>
+  <desc id="ofDesc">六种题型卡片:单选、多选、填空、判断、简答、论述,各自对应的多模型整合策略。</desc>
+
+  <defs>
+    <style>
+      .ff-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .ff-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="280" rx="14" ry="14" fill="#0F0E17"/>
+
+  <!-- 单选题 -->
+  <g transform="translate(44 30)">
+    <rect x="0" y="0" width="360" height="100" rx="8" ry="8" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+    <rect x="0" y="0" width="4" height="100" rx="2" ry="2" fill="#7C5CFF"/>
+    <text x="20" y="58" class="ff-sans" font-size="20" font-weight="700" fill="#E8E4D9">单选题</text>
+    <line x1="140" y1="24" x2="140" y2="76" stroke="#1F1D2E"/>
+    <text x="156" y="36" class="ff-mono" font-size="10" fill="#7C5CFF" letter-spacing="1.5">PROCESS</text>
+    <text x="156" y="58" class="ff-sans" font-size="13" fill="#E8E4D9">多模型投票</text>
+    <text x="156" y="78" class="ff-sans" font-size="12" fill="#A7A4B8">取最高权重答案</text>
+  </g>
+
+  <!-- 多选题 -->
+  <g transform="translate(420 30)">
+    <rect x="0" y="0" width="360" height="100" rx="8" ry="8" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+    <rect x="0" y="0" width="4" height="100" rx="2" ry="2" fill="#7C5CFF"/>
+    <text x="20" y="58" class="ff-sans" font-size="20" font-weight="700" fill="#E8E4D9">多选题</text>
+    <line x1="140" y1="24" x2="140" y2="76" stroke="#1F1D2E"/>
+    <text x="156" y="36" class="ff-mono" font-size="10" fill="#7C5CFF" letter-spacing="1.5">PROCESS</text>
+    <text x="156" y="58" class="ff-sans" font-size="13" fill="#E8E4D9">选项求并集</text>
+    <text x="156" y="78" class="ff-sans" font-size="12" fill="#A7A4B8">按权重筛选</text>
+  </g>
+
+  <!-- 填空题 -->
+  <g transform="translate(796 30)">
+    <rect x="0" y="0" width="360" height="100" rx="8" ry="8" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+    <rect x="0" y="0" width="4" height="100" rx="2" ry="2" fill="#7C5CFF"/>
+    <text x="20" y="58" class="ff-sans" font-size="20" font-weight="700" fill="#E8E4D9">填空题</text>
+    <line x1="140" y1="24" x2="140" y2="76" stroke="#1F1D2E"/>
+    <text x="156" y="36" class="ff-mono" font-size="10" fill="#7C5CFF" letter-spacing="1.5">PROCESS</text>
+    <text x="156" y="58" class="ff-sans" font-size="13" fill="#E8E4D9">答案合并</text>
+    <text x="156" y="78" class="ff-sans" font-size="12" fill="#A7A4B8">取共识片段</text>
+  </g>
+
+  <!-- 判断题 -->
+  <g transform="translate(44 150)">
+    <rect x="0" y="0" width="360" height="100" rx="8" ry="8" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+    <rect x="0" y="0" width="4" height="100" rx="2" ry="2" fill="#E8B547"/>
+    <text x="20" y="58" class="ff-sans" font-size="20" font-weight="700" fill="#E8E4D9">判断题</text>
+    <line x1="140" y1="24" x2="140" y2="76" stroke="#1F1D2E"/>
+    <text x="156" y="36" class="ff-mono" font-size="10" fill="#E8B547" letter-spacing="1.5">PROCESS</text>
+    <text x="156" y="58" class="ff-sans" font-size="13" fill="#E8E4D9">投票 True / False</text>
+    <text x="156" y="78" class="ff-sans" font-size="12" fill="#A7A4B8">二选一权重决胜</text>
+  </g>
+
+  <!-- 简答题 -->
+  <g transform="translate(420 150)">
+    <rect x="0" y="0" width="360" height="100" rx="8" ry="8" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+    <rect x="0" y="0" width="4" height="100" rx="2" ry="2" fill="#E8B547"/>
+    <text x="20" y="58" class="ff-sans" font-size="20" font-weight="700" fill="#E8E4D9">简答题</text>
+    <line x1="140" y1="24" x2="140" y2="76" stroke="#1F1D2E"/>
+    <text x="156" y="36" class="ff-mono" font-size="10" fill="#E8B547" letter-spacing="1.5">PROCESS</text>
+    <text x="156" y="58" class="ff-sans" font-size="13" fill="#E8E4D9">多模型整合</text>
+    <text x="156" y="78" class="ff-sans" font-size="12" fill="#A7A4B8">可人工编辑</text>
+  </g>
+
+  <!-- 论述题 -->
+  <g transform="translate(796 150)">
+    <rect x="0" y="0" width="360" height="100" rx="8" ry="8" fill="#13111C" stroke="#1F1D2E" stroke-width="1"/>
+    <rect x="0" y="0" width="4" height="100" rx="2" ry="2" fill="#E8B547"/>
+    <text x="20" y="58" class="ff-sans" font-size="20" font-weight="700" fill="#E8E4D9">论述题</text>
+    <line x1="140" y1="24" x2="140" y2="76" stroke="#1F1D2E"/>
+    <text x="156" y="36" class="ff-mono" font-size="10" fill="#E8B547" letter-spacing="1.5">PROCESS</text>
+    <text x="156" y="58" class="ff-sans" font-size="13" fill="#E8E4D9">大纲合并</text>
+    <text x="156" y="78" class="ff-sans" font-size="12" fill="#A7A4B8">可手动修订</text>
+  </g>
+</svg>
